@@ -13,6 +13,9 @@ import com.example.dllo.zhangxiwei_travelapp.fragment.FragmentTools;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadPoolExecutor;
+
+import threadpool.MyThreadPool;
 
 /**
  * Created by dllo on 16/5/9.
@@ -23,6 +26,7 @@ public class MainActivity extends BaseActivity{
     List<Fragment> fragments;
     ViewPager mainViewPager;
     TabLayout mainTabLayout;
+    private ThreadPoolExecutor myThreadPool;
 
     @Override
     protected int getLayout() {
@@ -56,5 +60,17 @@ public class MainActivity extends BaseActivity{
         mainTabLayout.setTabTextColors(Color.rgb(0, 0, 0), Color.rgb(00, 153, 255));
         mainTabLayout.setSelectedTabIndicatorColor(Color.rgb(00, 153, 255));
 
+
+        myThreadPool = MyThreadPool.getInstance().getThreadPool();
+        myThreadPool.execute(FragmentNote.noteRotateRunning);
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        myThreadPool.shutdown();
+        super.onDestroy();
     }
 }

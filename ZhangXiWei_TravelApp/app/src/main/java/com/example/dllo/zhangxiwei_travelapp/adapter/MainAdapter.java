@@ -24,6 +24,7 @@ public class MainAdapter extends FragmentPagerAdapter {
 
     public void setFragments(List<Fragment> fragments) {
         this.fragments = fragments;
+        notifyDataSetChanged();
     }
 
     @Override

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/fragment_note_recycler_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/fragment_note_recycler_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"/>
+
+    <TextView
+        android:id="@+id/fragment_note_recycler_startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_note_recycler_name"
+        android:textSize="5sp"
+        android:text="startdate / "/>
+
+    <TextView
+        android:id="@+id/fragment_note_recycler_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_note_recycler_name"
+        android:layout_toRightOf="@id/fragment_note_recycler_startdate"
+        android:textSize="5sp"
+        android:text="days , "/>
+
+    <TextView
+        android:id="@+id/fragment_note_recycler_photos_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_note_recycler_name"
+        android:layout_toRightOf="@id/fragment_note_recycler_days"
+        android:textSize="5sp"
+        android:text="photos_count"/>
+
+
+</RelativeLayout>
