@@ -68,6 +68,7 @@ public class NoteContentAdapter extends BaseAdapter {
         NoteBeanContent.TripDaysBean tripDaysBean = tripDaysBeans.get(position);
 
         myViewHolder.whichDay.setText("DAY " + tripDaysBean.getDay() + " ");
+
         myViewHolder.date.setText(tripDaysBean.getTrip_date() + " ");
         myViewHolder.week.setText("星期几");
 

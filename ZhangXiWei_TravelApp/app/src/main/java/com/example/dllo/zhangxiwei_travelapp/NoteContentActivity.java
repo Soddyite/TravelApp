@@ -2,6 +2,12 @@ package com.example.dllo.zhangxiwei_travelapp;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +34,9 @@ public class NoteContentActivity extends BaseActivity {
     TextView whichDay, date;
     MyListView noteListView;
     NoteContentAdapter noteContentAdapter;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    FloatingActionButton fab;
 
 
     @Override
@@ -51,6 +60,9 @@ public class NoteContentActivity extends BaseActivity {
         noteListView = bindView(R.id.note_content_listview);
         whichDay = bindView(R.id.note_content_title_which_day);
         date = bindView(R.id.note_content_title_another_date);
+        drawerLayout = bindView(R.id.note_content_drawer_layout);
+        navigationView = bindView(R.id.note_content_nav_view);
+        fab = bindView(R.id.note_content_nav_fab);
 
     }
 
@@ -99,6 +111,30 @@ public class NoteContentActivity extends BaseActivity {
         });
 
         requestQueue.add(stringRequest);
+
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+
+            }
+        });
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
+//        //打开抽屉的方法
+//        drawerLayout.openDrawer(GravityCompat.START);
+//
+//        //关闭抽屉的方法
+//        drawerLayout.closeDrawer(GravityCompat.START);
+
 
     }
 
