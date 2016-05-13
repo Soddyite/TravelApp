@@ -9,7 +9,7 @@
         android:id="@+id/welcome_page_logo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/splash_img" />
+        android:src="@mipmap/welcome_loge" />
 
 
     <ImageView
@@ -19,6 +19,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:layout_alignParentBottom="true"
-        android:src="@mipmap/splash_slogan" />
+        android:src="@mipmap/web_url" />
 
 </RelativeLayout>

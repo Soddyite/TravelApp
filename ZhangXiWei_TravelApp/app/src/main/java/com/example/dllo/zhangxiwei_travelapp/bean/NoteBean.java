@@ -1,5 +1,7 @@
 package com.example.dllo.zhangxiwei_travelapp.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by dllo on 16/5/10.
  */

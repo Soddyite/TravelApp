@@ -44,4 +44,6 @@ public class NoteViewPagerAdapter extends PagerAdapter {
         View v = views.get(position);
         container.removeView(v);
     }
+
+
 }
