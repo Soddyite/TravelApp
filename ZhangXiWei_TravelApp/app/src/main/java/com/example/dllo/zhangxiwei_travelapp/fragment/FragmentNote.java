@@ -1,8 +1,6 @@
 package com.example.dllo.zhangxiwei_travelapp.fragment;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.TabLayout;
@@ -21,7 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.dllo.zhangxiwei_travelapp.NoteContentActivity;
+import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+import com.example.dllo.zhangxiwei_travelapp.activity.NoteContentActivity;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.adapter.NoteListViewAdapter;
 import com.example.dllo.zhangxiwei_travelapp.adapter.NoteViewPagerAdapter;
@@ -86,7 +85,8 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
     private void initListView() {
 
-        requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue = Volley.newRequestQueue(MyApplication.getContext());
+
         StringRequest stringRequest = new StringRequest("http://chanyouji.com/api/trips/featured.json?page",
                 new Response.Listener<String>() {
                     @Override
@@ -99,7 +99,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
                         noteBeans = gson.fromJson(response, new TypeToken<List<NoteBean>>() {
                         }.getType());
 
-                        listViewAdapter = new NoteListViewAdapter(getContext());
+                        listViewAdapter = new NoteListViewAdapter(MyApplication.getContext());
                         listViewAdapter.setNoteBeans(noteBeans);
 
                         noteListView.setAdapter(listViewAdapter);
@@ -122,7 +122,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
     private void initRotateView() {
 
-        requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue = Volley.newRequestQueue(MyApplication.getContext());
         noteRotateBeans = new ArrayList<>();
         views = new ArrayList<>();
         StringRequest stringRequest1 = new StringRequest("http://chanyouji.com/api/adverts.json?name=app_featured_banner_android",
@@ -183,16 +183,15 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
     private void initViewPager() {
 
-
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_note_viewpager_item, null);
+        View view = LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.fragment_note_viewpager_item, null);
         ImageView imageView = (ImageView) view.findViewById(R.id.fragment_note_viewpager_item_iv);
-        Picasso.with(getContext()).load(noteRotateBeans.get(0).getImage_url()).into(imageView);
+        Picasso.with(MyApplication.getContext()).load(noteRotateBeans.get(0).getImage_url()).into(imageView);
 
         views.add(view);
 
-        View view1 = LayoutInflater.from(getContext()).inflate(R.layout.fragment_note_viewpager_item, null);
+        View view1 = LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.fragment_note_viewpager_item, null);
         ImageView imageView1 = (ImageView) view1.findViewById(R.id.fragment_note_viewpager_item_iv);
-        Picasso.with(getContext()).load(noteRotateBeans.get(1).getImage_url()).into(imageView1);
+        Picasso.with(MyApplication.getContext()).load(noteRotateBeans.get(1).getImage_url()).into(imageView1);
 
         views.add(view1);
     }
@@ -243,7 +242,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         NoteBean noteBean = noteBeans.get(position - 1);
-        Intent intent = new Intent(getContext(), NoteContentActivity.class);
+        Intent intent = new Intent(MyApplication.getContext(), NoteContentActivity.class);
         intent.putExtra("noteId", noteBean.getId());
         Log.d(TAG, "noteBean.getId():" + noteBean.getId());
         startActivity(intent);

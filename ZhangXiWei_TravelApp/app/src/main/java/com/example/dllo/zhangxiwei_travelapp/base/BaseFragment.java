@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+
 /**
  * Created by dllo on 16/5/9.
  */
@@ -18,8 +20,8 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onAttach(Context context) {
-        super.onAttach(context);
-        mContext = context;
+        super.onAttach(MyApplication.getContext());
+        mContext = MyApplication.getContext();
     }
 
     @Nullable

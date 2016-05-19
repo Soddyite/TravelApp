@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e9e7e7">
+    android:background="@color/colorAnotherWhite">
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#707678" />
+        android:background="@color/colorAlmostWhite" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#707678" />
+        android:background="@color/colorAlmostWhite" />
 
 
     <com.example.dllo.zhangxiwei_travelapp.utils.MyListView

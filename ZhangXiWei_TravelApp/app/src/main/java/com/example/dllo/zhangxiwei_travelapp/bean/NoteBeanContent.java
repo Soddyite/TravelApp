@@ -7,7 +7,6 @@ import java.util.List;
  */
 public class NoteBeanContent {
 
-
     private int id;
     private String name;
     private int photos_count;
@@ -526,8 +525,6 @@ public class NoteBeanContent {
             public static class MemoBean {
             }
 
-
-
             public static class NotesBean {
                 private int id;
                 private int row_order;
@@ -556,8 +553,6 @@ public class NoteBeanContent {
                         this.url = url;
                     }
                 }
-
-
 
                 public int getId() {
                     return id;

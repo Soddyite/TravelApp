@@ -1,4 +1,4 @@
-package com.example.dllo.zhangxiwei_travelapp;
+package com.example.dllo.zhangxiwei_travelapp.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.adapter.NoteContentAdapter;
 import com.example.dllo.zhangxiwei_travelapp.base.BaseActivity;
 import com.example.dllo.zhangxiwei_travelapp.bean.NoteBeanContent;

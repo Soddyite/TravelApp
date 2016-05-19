@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/welimg"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/strategy_content_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日本概览"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/strategy_content_place_englishname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/strategy_content_place_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/strategy_content_place_name"
+            android:text="JAPAN"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/strategy_content_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/strategy_download" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/strategy_content_radiobutton_strategy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/strategy_strategy"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="攻略"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/strategy_content_radiobutton_travel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/strategy_travel"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="行程"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/strategy_content_radiobutton_destination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/strategy_destination"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="旅行地"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/strategy_content_radiobutton_topic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/strategy_topic"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="专题"
+            android:textSize="20dp" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
