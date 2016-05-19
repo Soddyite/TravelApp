@@ -1,5 +1,6 @@
 package com.example.dllo.zhangxiwei_travelapp.fragment;
 
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -71,6 +72,7 @@ public class FragmentStrategy extends BaseFragment implements StrategyClickListe
             }
         });
         requestQueue.add(stringRequest);
+
         strategyListView.setOnItemClickListener(this);
 
 

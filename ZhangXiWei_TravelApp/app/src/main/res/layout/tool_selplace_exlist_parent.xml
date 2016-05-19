@@ -6,8 +6,9 @@
 
     <TextView
         android:id="@+id/tool_selplace_exlist_parent_tv"
-        android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="15dp" />
 
 </LinearLayout>

@@ -20,9 +20,9 @@ import java.util.Map;
  */
 public class ToolSelPlaceExListAdapter extends BaseExpandableListAdapter {
     Context context;
-    List<ToolPlaceBean> toolPlaceBeans;
-    List<String> parent ;
-    Map<String, List<String>> map ;
+    List<ToolPlaceBean.DestinationsBean> destinationsBeans;
+    List<String> parent;
+    Map<String, List<String>> map;
 
     public ToolSelPlaceExListAdapter(Context context) {
         this.context = context;
@@ -32,14 +32,15 @@ public class ToolSelPlaceExListAdapter extends BaseExpandableListAdapter {
     }
 
 
-    public void setToolPlaceBeans(List<ToolPlaceBean> toolPlaceBeans) {
-        this.toolPlaceBeans = toolPlaceBeans;
-        for (ToolPlaceBean toolPlaceBean : toolPlaceBeans) {
-            String key = toolPlaceBean.getDestinations().get(0).getName_zh_cn();
+    public void setToolPlaceBeans(List<ToolPlaceBean.DestinationsBean> destinationsBeans) {
+        this.destinationsBeans = destinationsBeans;
+        for (ToolPlaceBean.DestinationsBean destinationsBean : destinationsBeans) {
+
+            String key = destinationsBean.getName_zh_cn();
             parent.add(key);
             List<String> list = new ArrayList<>();
-            for (ToolPlaceBean.DestinationsBean destinationsBean : toolPlaceBean.getDestinations()) {
-                list.add(destinationsBean.getName_zh_cn());
+            for (ToolPlaceBean.DestinationsBean.ChildrenBean childrenBean : destinationsBean.getChildren()) {
+                list.add(childrenBean.getName_zh_cn());
             }
             map.put(key, list);
         }

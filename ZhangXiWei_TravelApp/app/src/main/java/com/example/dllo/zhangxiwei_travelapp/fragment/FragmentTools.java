@@ -6,10 +6,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.dllo.zhangxiwei_travelapp.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.activity.ToolSelectPlaceActivity;
 import com.example.dllo.zhangxiwei_travelapp.base.BaseFragment;
+import com.example.dllo.zhangxiwei_travelapp.bean.ToolSinglePlaceBean;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.List;
 
 /**
  * Created by dllo on 16/5/9.
@@ -17,6 +27,10 @@ import com.example.dllo.zhangxiwei_travelapp.base.BaseFragment;
 public class FragmentTools extends BaseFragment implements View.OnClickListener {
 
     TextView placeName, minTem, minTem2, maxTem, maxTem2;
+    TextView time;
+    String name = null;
+
+    private ToolSinglePlaceBean toolSinglePlaceBean;
 
 
     @Override
@@ -28,19 +42,21 @@ public class FragmentTools extends BaseFragment implements View.OnClickListener 
     public void initView() {
         placeName = bindView(R.id.fragment_tool_place_name);
         minTem = bindView(R.id.fragment_tool_min_tem);
-        minTem.setTextColor(Color.rgb(0, 153, 255));
         minTem2 = bindView(R.id.fragment_tool_min_tem_2);
-        minTem2.setTextColor(Color.rgb(0, 153, 255));
         maxTem = bindView(R.id.fragment_tool_max_tem);
-        maxTem.setTextColor(Color.rgb(223, 5, 19));
         maxTem2 = bindView(R.id.fragment_tool_max_tem_2);
-        maxTem2.setTextColor(Color.rgb(223, 5, 19));
+        time = bindView(R.id.fragment_tool_time);
+
 
     }
 
     @Override
     public void initData() {
 
+        minTem.setTextColor(Color.rgb(0, 153, 255));
+        minTem2.setTextColor(Color.rgb(0, 153, 255));
+        maxTem.setTextColor(Color.rgb(223, 5, 19));
+        maxTem2.setTextColor(Color.rgb(223, 5, 19));
         placeName.setOnClickListener(this);
 
     }
@@ -61,10 +77,40 @@ public class FragmentTools extends BaseFragment implements View.OnClickListener 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        int placeId = 0;
         if (requestCode == 1 && resultCode == 2) {
-            int placeId = data.getIntExtra("placeId", 0);
+            name = data.getStringExtra("placeName");
+            placeId = data.getIntExtra("placeId", 0);
             Log.d("FragmentTools", "placeId:" + placeId);
         }
+
+        RequestQueue requestQueue = Volley.newRequestQueue(MyApplication.getContext());
+        StringRequest stringRequest = new StringRequest("http://chanyouji.com/api/wiki/destinations/infos/" + placeId + ".json", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Gson gson = new Gson();
+                toolSinglePlaceBean = gson.fromJson(response, ToolSinglePlaceBean.class);
+                initBackData();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        requestQueue.add(stringRequest);
+
+    }
+
+    private void initBackData() {
+
+        placeName.setText(name);
+        minTem.setText(toolSinglePlaceBean.getTemp_min() + "");
+        maxTem.setText(toolSinglePlaceBean.getTemp_max() + "");
+        time.setText(toolSinglePlaceBean.getCurrent_time());
+
 
     }
 }
