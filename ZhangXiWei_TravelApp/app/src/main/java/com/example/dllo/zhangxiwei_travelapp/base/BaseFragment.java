@@ -8,10 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dllo.zhangxiwei_travelapp.MyApplication;
-
 /**
  * Created by dllo on 16/5/9.
+ * fragment基类
  */
 public abstract class BaseFragment extends Fragment {
 

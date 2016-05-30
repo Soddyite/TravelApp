@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/12.
+ * 游记页详情页的实体类
  */
 public class NoteBeanContent {
 
@@ -376,6 +377,25 @@ public class NoteBeanContent {
             private Object entry_name;
             private Object attraction_type;
             private int updated_at;
+            private int day;
+            private String date;
+
+            public String getDate() {
+                return date;
+            }
+
+            public void setDate(String date) {
+                this.date = date;
+            }
+
+            public int getDay() {
+                return day;
+            }
+
+            public void setDay(int day) {
+                this.day = day;
+            }
+
             /**
              * id : 12941402
              * row_order : -5592405
@@ -542,7 +562,27 @@ public class NoteBeanContent {
                     this.photo = photo;
                 }
 
-                public static class PhotoBean{
+                public static class PhotoBean {
+
+                    int image_width;
+                    int image_height;
+
+                    public int getImage_width() {
+                        return image_width;
+                    }
+
+                    public void setImage_width(int image_width) {
+                        this.image_width = image_width;
+                    }
+
+                    public int getImage_height() {
+                        return image_height;
+                    }
+
+                    public void setImage_height(int image_height) {
+                        this.image_height = image_height;
+                    }
+
                     String url;
 
                     public String getUrl() {

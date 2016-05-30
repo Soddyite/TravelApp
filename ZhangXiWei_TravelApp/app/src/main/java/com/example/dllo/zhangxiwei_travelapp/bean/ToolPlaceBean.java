@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/18.
+ * 工具页选择地点页的实体类
  */
 public class ToolPlaceBean {
 

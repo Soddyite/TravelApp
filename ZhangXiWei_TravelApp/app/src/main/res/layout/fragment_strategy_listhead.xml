@@ -20,9 +20,9 @@
             android:layout_width="0dp"
             android:layout_height="25dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="日本" />
+            android:text="" />
 
         <TextView
             android:id="@+id/strategy_recent_record_2"
@@ -30,9 +30,9 @@
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="美国" />
+            android:text="" />
 
         <TextView
             android:id="@+id/strategy_recent_record_3"
@@ -40,9 +40,9 @@
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="泰国" />
+            android:text="" />
 
     </LinearLayout>
 
@@ -57,9 +57,9 @@
             android:layout_width="0dp"
             android:layout_height="25dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="台湾" />
+            android:text="" />
 
         <TextView
             android:id="@+id/strategy_recent_record_5"
@@ -67,9 +67,9 @@
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="尼泊尔" />
+            android:text="" />
 
         <TextView
             android:id="@+id/strategy_recent_record_6"
@@ -77,9 +77,9 @@
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@color/colorAlmostWhite"
+            android:background="@color/colorWhiteTwo"
             android:gravity="center"
-            android:text="缅甸" />
+            android:text="" />
 
     </LinearLayout>
 

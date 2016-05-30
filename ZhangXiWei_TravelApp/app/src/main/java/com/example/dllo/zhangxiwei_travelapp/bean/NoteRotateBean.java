@@ -2,6 +2,7 @@ package com.example.dllo.zhangxiwei_travelapp.bean;
 
 /**
  * Created by dllo on 16/5/11.
+ * 游记页轮播图的实体类
  */
 public class NoteRotateBean {
 

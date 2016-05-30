@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/9.
+ * 主页ViewPager的适配器
  */
 public class MainAdapter extends FragmentPagerAdapter {
 

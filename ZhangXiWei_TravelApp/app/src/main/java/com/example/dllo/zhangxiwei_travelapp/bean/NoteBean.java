@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by dllo on 16/5/10.
+ * 游记页的实体类
  */
 public class NoteBean {
 

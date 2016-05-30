@@ -6,68 +6,79 @@
 
 
 
-    <!--<ImageView-->
+    <com.example.dllo.zhangxiwei_travelapp.utils.MyImageView
+        android:id="@+id/note_content_in_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop" />
 
-        <!--android:id="@+id/note_content_in_image"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+    <TextView
+        android:id="@+id/note_content_in_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/note_content_in_content"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="内容内容内容内容内容内容内容内容内容内容内容内容-->
-        <!--内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容-->
-        <!--内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容-->
-        <!--"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal">-->
+        <ImageView
+            android:id="@+id/note_content_in_bottom_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
 
-        <!--<ImageView-->
-            <!--android:id="@+id/note_content_in_bottom_image"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
+        <TextView
+            android:id="@+id/note_content_in_bottom_site_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
 
-        <!--<TextView-->
-            <!--android:id="@+id/note_content_in_bottom_site_name"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="地方" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1" />-->
-
-
-        <!--<RadioGroup-->
-
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
-
-            <!--<RadioButton-->
-                <!--android:id="@+id/note_content_in_bottom_support"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:button="@null"-->
-                <!--android:drawableLeft="@mipmap/ic_launcher"-->
-                <!--android:text="13" />-->
-
-            <!--<RadioButton-->
-                <!--android:id="@+id/note_content_in_bottom_mail"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:button="@null"-->
-                <!--android:drawableLeft="@mipmap/ic_launcher"-->
-                <!--android:text="2" />-->
-
-        <!--</RadioGroup>-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
-    <!--</LinearLayout>-->
+        <RadioGroup
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/note_content_in_bottom_support"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorAlmostWhite"
+                android:button="@null"
+                android:drawableLeft="@mipmap/bottom_support"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="13" />
+
+            <RadioButton
+                android:id="@+id/note_content_in_bottom_mail"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAlmostWhite"
+                android:button="@null"
+                android:drawableLeft="@mipmap/bottom_mail"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="2" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
 
 </LinearLayout>

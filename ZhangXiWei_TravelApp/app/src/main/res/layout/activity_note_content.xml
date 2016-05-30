@@ -27,17 +27,17 @@
                 app:contentScrim="?attr/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-
                 <android.support.v7.widget.Toolbar
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin" />
 
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="20dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.5">
 
                     <ImageView
                         android:id="@+id/note_content_title_background"
@@ -53,7 +53,6 @@
                         android:layout_height="40dp"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="5dp"
-
                         android:src="@mipmap/ic_launcher" />
 
                     <TextView
@@ -91,7 +90,6 @@
 
                 </RelativeLayout>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,22 +125,12 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/note_content_expandablelistview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context=".activity.NoteContentActivity"
-            tools:showIn="@layout/activity_main">
-
-
-            <com.example.dllo.zhangxiwei_travelapp.utils.MyListView
-                android:id="@+id/note_content_listview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
-        </android.support.v4.widget.NestedScrollView>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
         <android.support.design.widget.FloatingActionButton
@@ -150,62 +138,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
+
             android:layout_margin="15dp"
             android:background="@color/colorAnotherBlue"
             android:src="@mipmap/note_content_menu" />
 
-
     </android.support.design.widget.CoordinatorLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:src="@mipmap/note_content_back" />
-
-        <ImageView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/logo_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:src="@mipmap/note_content_download" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:src="@mipmap/note_content_collection" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:src="@mipmap/note_content_share" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/note_content_comment" />
-
-    </LinearLayout>
-
+    <include layout="@layout/activity_note_content_title" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/note_content_nav_view"
@@ -216,6 +156,5 @@
         android:fitsSystemWindows="true"
         app:itemTextColor="@color/colorWhite"
         app:menu="@menu/note_content_drawer" />
-
 
 </android.support.v4.widget.DrawerLayout>

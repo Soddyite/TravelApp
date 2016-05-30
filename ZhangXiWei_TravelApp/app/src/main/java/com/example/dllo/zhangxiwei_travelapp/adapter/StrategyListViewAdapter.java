@@ -18,6 +18,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/16.
+ * 攻略页外层listview适配器
  */
 public class StrategyListViewAdapter extends BaseAdapter {
 
@@ -69,13 +70,13 @@ public class StrategyListViewAdapter extends BaseAdapter {
         recyclerAdapter.setStrategyBean(strategyBeans.get(position));
         strateListViewHolder.recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
         strateListViewHolder.recyclerView.setAdapter(recyclerAdapter);
-
+        recyclerAdapter.setStrategyClickListener(clickListener);
         return convertView;
     }
 
     public void onClick(StrategyClickListener clickListener) {
-        recyclerAdapter.setStrategyClickListener(clickListener);
-
+        this.clickListener = clickListener;
+        Log.d("StrategyListViewAdapter", "clickListener==null:" + (clickListener == null));
     }
 
     class StrateListViewHolder {

@@ -2,10 +2,12 @@ package com.example.dllo.zhangxiwei_travelapp.utils;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.ListView;
 
 /**
  * Created by dllo on 16/5/12.
+ * 自定义listview,解决嵌套listview下拉冲突
  */
 public class MyListView extends ListView {
 
@@ -38,5 +40,6 @@ public class MyListView extends ListView {
         super.onMeasure(widthMeasureSpec, expandSpec);
 
     }
+
 
 }

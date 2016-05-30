@@ -2,6 +2,7 @@ package com.example.dllo.zhangxiwei_travelapp.bean;
 
 /**
  * Created by dllo on 16/5/19.
+ * 工具页单独某个地点获取信息实体类
  */
 public class ToolSinglePlaceBean {
 

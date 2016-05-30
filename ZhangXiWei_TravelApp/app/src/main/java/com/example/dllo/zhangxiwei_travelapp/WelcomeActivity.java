@@ -8,7 +8,9 @@ import android.widget.ImageView;
 
 import com.example.dllo.zhangxiwei_travelapp.base.BaseActivity;
 
+import cn.jpush.android.api.JPushInterface;
 
+//欢迎页,加入子线程实现延时跳转
 public class WelcomeActivity extends BaseActivity {
 
     private ImageView pageImageView, ipImageView;
@@ -74,6 +76,18 @@ public class WelcomeActivity extends BaseActivity {
             }
         }).start();
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        JPushInterface.onPause(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JPushInterface.onResume(this);
     }
 
     @Override

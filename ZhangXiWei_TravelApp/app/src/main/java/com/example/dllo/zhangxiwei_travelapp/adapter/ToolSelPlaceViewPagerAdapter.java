@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/19.
+ * 工具页选择地点页的ViewPager适配器
  */
 public class ToolSelPlaceViewPagerAdapter extends FragmentPagerAdapter {
 

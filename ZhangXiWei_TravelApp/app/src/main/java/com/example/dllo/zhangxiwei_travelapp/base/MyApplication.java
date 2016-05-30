@@ -1,10 +1,11 @@
-package com.example.dllo.zhangxiwei_travelapp;
+package com.example.dllo.zhangxiwei_travelapp.base;
 
 import android.app.Application;
 import android.content.Context;
 
 /**
  * Created by dllo on 16/5/17.
+ * 自定义Application
  */
 public class MyApplication extends Application{
 

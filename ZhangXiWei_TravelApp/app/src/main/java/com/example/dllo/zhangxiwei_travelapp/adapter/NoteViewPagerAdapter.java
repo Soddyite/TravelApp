@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/9.
+ * 游记页头布局的轮播图ViewPager的适配器
  */
 public class NoteViewPagerAdapter extends PagerAdapter {
 

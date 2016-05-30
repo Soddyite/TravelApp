@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/17.
+ * 攻略页的实体类
  */
 public class StrategyBean {
 

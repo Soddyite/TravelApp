@@ -1,4 +1,4 @@
-package com.example.dllo.zhangxiwei_travelapp.threadpool;
+package com.example.dllo.zhangxiwei_travelapp.singleton;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by dllo on 16/5/10.
+ * 线程池的单例
  */
 public class MyThreadPool {
     private static MyThreadPool myThreadPool;

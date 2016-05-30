@@ -24,6 +24,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/10.
+ * 游记也的listview适配器
  */
 public class NoteListViewAdapter extends BaseAdapter {
 

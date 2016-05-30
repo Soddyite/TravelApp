@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
-import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+import com.example.dllo.zhangxiwei_travelapp.base.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.adapter.ToolSelPlaceExListAdapter;
 import com.example.dllo.zhangxiwei_travelapp.bean.ToolPlaceBean;
@@ -19,6 +18,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/19.
+ * 工具页选择地点页的ViewPager的fragment
  */
 public class ToolSelPlaceViewFragment extends Fragment implements ExpandableListView.OnChildClickListener {
 

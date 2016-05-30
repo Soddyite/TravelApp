@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.bean.StrategyBean;
@@ -18,6 +19,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/18.
+ * 攻略页内层recyclerview适配器
  */
 public class StrategyRecyclerAdapter extends RecyclerView.Adapter<StrategyRecyclerAdapter.StrategyRecyclerViewHolder> {
 
@@ -42,7 +44,7 @@ public class StrategyRecyclerAdapter extends RecyclerView.Adapter<StrategyRecycl
     }
 
     @Override
-    public void onBindViewHolder(final StrategyRecyclerViewHolder holder, int position) {
+    public void onBindViewHolder(final StrategyRecyclerViewHolder holder, final int position) {
 
         holder.placeNameZh.setText(strategyBean.getDestinations().get(position).getName_zh_cn());
         holder.placeNameEn.setText(strategyBean.getDestinations().get(position).getName_en());
@@ -50,17 +52,17 @@ public class StrategyRecyclerAdapter extends RecyclerView.Adapter<StrategyRecycl
         Picasso.with(context).load(strategyBean.getDestinations().get(position).getImage_url()).into(holder.imageView);
 
         if (clickListener != null) {
-
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
+            holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int pos = holder.getLayoutPosition();
-                    clickListener.MyStrategyOnClick(pos);
+                    Log.d("StrategyRecyclerAdapter", "onClick-imageView");
+//                    int pos = holder.getLayoutPosition();
+                    int placeId = strategyBean.getDestinations().get(position).getId();
+                    String placeName = strategyBean.getDestinations().get(position).getName_zh_cn();
+                    clickListener.MyStrategyOnClick(placeId,placeName);
                 }
             });
-
         }
-
     }
 
     @Override

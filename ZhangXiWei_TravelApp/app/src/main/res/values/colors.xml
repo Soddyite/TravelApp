@@ -6,10 +6,12 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorAnotherWhite">#E9E7E7</color>
     <color name="colorAlmostWhite">#CCCACA</color>
+    <color name="colorWhiteTwo">#f4f4f4</color>
     <color name="colorBlue">#0099FF</color>
     <color name="colorTransparentBlack">#87000000</color>
     <color name="colorAnotherBlue">#64153CCC</color>
     <color name="colorRed">#df0513</color>
+    <color name="colorBlack">#121212</color>
 
 
 </resources>

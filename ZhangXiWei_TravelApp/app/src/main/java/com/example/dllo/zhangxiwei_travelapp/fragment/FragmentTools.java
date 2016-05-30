@@ -11,18 +11,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+import com.example.dllo.zhangxiwei_travelapp.base.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.activity.ToolSelectPlaceActivity;
 import com.example.dllo.zhangxiwei_travelapp.base.BaseFragment;
 import com.example.dllo.zhangxiwei_travelapp.bean.ToolSinglePlaceBean;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.util.List;
 
 /**
  * Created by dllo on 16/5/9.
+ * 工具页的fragment
  */
 public class FragmentTools extends BaseFragment implements View.OnClickListener {
 
@@ -40,6 +38,7 @@ public class FragmentTools extends BaseFragment implements View.OnClickListener 
 
     @Override
     public void initView() {
+
         placeName = bindView(R.id.fragment_tool_place_name);
         minTem = bindView(R.id.fragment_tool_min_tem);
         minTem2 = bindView(R.id.fragment_tool_min_tem_2);
@@ -47,13 +46,13 @@ public class FragmentTools extends BaseFragment implements View.OnClickListener 
         maxTem2 = bindView(R.id.fragment_tool_max_tem_2);
         time = bindView(R.id.fragment_tool_time);
 
-
     }
 
     @Override
     public void initData() {
 
         minTem.setTextColor(Color.rgb(0, 153, 255));
+
         minTem2.setTextColor(Color.rgb(0, 153, 255));
         maxTem.setTextColor(Color.rgb(223, 5, 19));
         maxTem2.setTextColor(Color.rgb(223, 5, 19));

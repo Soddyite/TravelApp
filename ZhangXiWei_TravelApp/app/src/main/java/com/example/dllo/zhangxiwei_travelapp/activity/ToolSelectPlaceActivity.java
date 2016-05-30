@@ -1,27 +1,20 @@
 package com.example.dllo.zhangxiwei_travelapp.activity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ExpandableListView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+import com.example.dllo.zhangxiwei_travelapp.base.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.R;
-import com.example.dllo.zhangxiwei_travelapp.adapter.ToolSelPlaceExListAdapter;
 import com.example.dllo.zhangxiwei_travelapp.adapter.ToolSelPlaceViewPagerAdapter;
-import com.example.dllo.zhangxiwei_travelapp.base.BaseActivity;
 import com.example.dllo.zhangxiwei_travelapp.bean.ToolPlaceBean;
 import com.example.dllo.zhangxiwei_travelapp.fragment.ToolSelPlaceViewFragment;
 import com.google.gson.Gson;
@@ -32,6 +25,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/18.
+ * 工具页里的位置选择页
  */
 public class ToolSelectPlaceActivity extends FragmentActivity {
 
@@ -80,6 +74,7 @@ public class ToolSelectPlaceActivity extends FragmentActivity {
 
     }
 
+    //ExpandableListView加载数据的方法
     private void initExListView() {
 
 

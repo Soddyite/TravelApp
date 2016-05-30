@@ -19,7 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.dllo.zhangxiwei_travelapp.MyApplication;
+import com.example.dllo.zhangxiwei_travelapp.base.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.activity.NoteContentActivity;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.adapter.NoteListViewAdapter;
@@ -37,6 +37,7 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/5/9.
+ * 游记页fragment
  */
 public class FragmentNote extends BaseFragment implements AbsListView.OnScrollListener, AdapterView.OnItemClickListener {
 
@@ -83,6 +84,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
     }
 
 
+    //加载listview的数据
     private void initListView() {
 
         requestQueue = Volley.newRequestQueue(MyApplication.getContext());
@@ -103,6 +105,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
                         listViewAdapter.setNoteBeans(noteBeans);
 
                         noteListView.setAdapter(listViewAdapter);
+                        //把ViewPager加入到listview的头布局中
                         noteListView.addHeaderView(myViewPager, null, false);
 
 
@@ -120,6 +123,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
     }
 
 
+    //加载ViewPager轮播图的数据
     private void initRotateView() {
 
         requestQueue = Volley.newRequestQueue(MyApplication.getContext());
@@ -138,7 +142,10 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
                         }.getType());
 
                         Log.d(TAG, "noteRotateBeans.size():" + noteRotateBeans.size());
+
+
                         //设置好view集合的数据
+                        //把数据加到views中,准备放入ViewPager里的方法
                         initViewPager();
 
                         //myViewPager是View,要放入头布局的
@@ -181,6 +188,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
     }
 
+    //把数据加到view中,准备放入ViewPager里
     private void initViewPager() {
 
         View view = LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.fragment_note_viewpager_item, null);
@@ -216,10 +224,11 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
                             List<NoteBean> anotherNoteBeans = new ArrayList<>();
                             anotherNoteBeans = gson.fromJson(response, new TypeToken<List<NoteBean>>() {
                             }.getType());
-                            listViewAdapter.addNoteBeans(anotherNoteBeans);
+//                            listViewAdapter.addNoteBeans(anotherNoteBeans);
                             for (NoteBean anotherNoteBean : anotherNoteBeans) {
                                 noteBeans.add(anotherNoteBean);
                             }
+                            listViewAdapter.setNoteBeans(noteBeans);
 
                         }
                     }, new Response.ErrorListener() {
@@ -229,6 +238,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
                 }
             });
+
             requestQueue.add(stringRequest);
         }
     }
@@ -249,6 +259,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
     }
 
+    //轮播图转动的子线程Runnable
     static class NoteRotateRunning implements Runnable {
 
         @Override

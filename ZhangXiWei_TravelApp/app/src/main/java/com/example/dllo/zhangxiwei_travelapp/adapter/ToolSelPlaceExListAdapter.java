@@ -17,6 +17,7 @@ import java.util.Map;
 
 /**
  * Created by dllo on 16/5/18.
+ * 工具页选择地点页的expandablelistview适配器
  */
 public class ToolSelPlaceExListAdapter extends BaseExpandableListAdapter {
     Context context;

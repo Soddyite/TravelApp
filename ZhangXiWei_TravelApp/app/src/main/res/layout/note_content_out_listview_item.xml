@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorAnotherWhite">
+    android:layout_height="wrap_content"
+    android:background="@color/colorAnotherWhite"
+    android:orientation="vertical">
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorAlmostWhite" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,23 +30,12 @@
             android:text="日期" />
 
         <TextView
-            android:id="@+id/note_content_week"
+            android:id="@+id/note_content_out_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="星期" />
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorAlmostWhite" />
-
-
-    <com.example.dllo.zhangxiwei_travelapp.utils.MyListView
-        android:id="@+id/note_content_out_listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
