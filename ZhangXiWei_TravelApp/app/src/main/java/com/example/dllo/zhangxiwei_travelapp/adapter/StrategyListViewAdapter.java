@@ -1,6 +1,7 @@
 package com.example.dllo.zhangxiwei_travelapp.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -66,6 +67,7 @@ public class StrategyListViewAdapter extends BaseAdapter {
         }
 
         strateListViewHolder.textView.setText(names[position]);
+        strateListViewHolder.textView.setTextColor(Color.GRAY);
         recyclerAdapter = new StrategyRecyclerAdapter(context);
         recyclerAdapter.setStrategyBean(strategyBeans.get(position));
         strateListViewHolder.recyclerView.setLayoutManager(new GridLayoutManager(context, 2));

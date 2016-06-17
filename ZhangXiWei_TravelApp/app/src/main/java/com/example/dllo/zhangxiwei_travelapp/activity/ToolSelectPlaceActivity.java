@@ -103,8 +103,13 @@ public class ToolSelectPlaceActivity extends FragmentActivity {
 
         List<Fragment> fragments = new ArrayList<>();
 
-        fragments.add(new ToolSelPlaceViewFragment(destinationsBeans));
-        fragments.add(new ToolSelPlaceViewFragment(destinationsBeans2));
+        ToolSelPlaceViewFragment toolSelPlaceViewFragment = new ToolSelPlaceViewFragment();
+        toolSelPlaceViewFragment.setDestinationsBeans(destinationsBeans);
+        ToolSelPlaceViewFragment toolSelPlaceViewFragment1 = new ToolSelPlaceViewFragment();
+        toolSelPlaceViewFragment1.setDestinationsBeans(destinationsBeans2);
+
+        fragments.add(toolSelPlaceViewFragment);
+        fragments.add(toolSelPlaceViewFragment1);
 
 
         viewPagerAdapter.setFragments(fragments);

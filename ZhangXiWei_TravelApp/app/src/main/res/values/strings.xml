@@ -11,4 +11,42 @@
     <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
     <string name="logining">程序在后台执行, 请查看日志！</string>
     <string name="setting_su">设置成功</string>
+    <string name="search_result">查询结果</string>
+    <string name="note_and_destination_and_user">搜索游记,旅行地与用户</string>
+    <string name="search">查询</string>
+    <string name="email">电子邮箱</string>
+    <string name="password">密码</string>
+    <string name="register">注册</string>
+    <string name="cancel">取消</string>
+    <string name="signup">登陆</string>
+    <string name="recent_browse">最近浏览</string>
+    <string name="Asia">国外-亚洲</string>
+    <string name="Degree">°C</string>
+    <string name="Line">-</string>
+    <string name="Translation">语音翻译</string>
+    <string name="Travel">旅行记账</string>
+    <string name="Map">旅行地图</string>
+    <string name="Rate">实时汇率</string>
+    <string name="initPush">initPush</string>
+    <string name="stopPush">stopPush</string>
+    <string name="resumePush">resumePush</string>
+    <string name="get_Registration_Id">get_Registration_Id</string>
+    <string name="Advanced">高级功能</string>
+    <string name="Thirty">13</string>
+    <string name="Two">2</string>
+    <string name="Set_tag_and_alias">设置Tag和Alias </string>
+    <string name="Tag"> Tag :</string>
+    <string name="Set_tag">设置Tag  </string>
+    <string name="Register_and_signup">登陆与注册</string>
+    <string name="Strategy">攻略</string>
+    <string name="Travels">行程</string>
+    <string name="Destination">旅行地</string>
+    <string name="Topic">专题</string>
+    <string name="MyTravel">我的旅行</string>
+    <string name="SelPlace">请选择地点</string>
+
+
+
+
+
 </resources>

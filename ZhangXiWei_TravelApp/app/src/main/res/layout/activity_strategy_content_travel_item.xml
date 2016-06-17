@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="@dimen/ten">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="@dimen/two_hundred">
 
         <ImageView
             android:id="@+id/travel_item_imageview"
@@ -21,8 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="5dp"
-            android:text="7天"
+            android:layout_margin="@dimen/five"
             android:textColor="@color/colorWhite" />
 
         <TextView
@@ -30,10 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginLeft="@dimen/five"
             android:layout_toRightOf="@id/travel_item_daystv"
-            android:text="38个旅行地"
             android:textColor="@color/colorWhite" />
 
 
@@ -42,10 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/travel_item_daystv"
-            android:layout_marginLeft="5dp"
-            android:text="日本全景7日游"
+            android:layout_marginLeft="@dimen/five"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="@dimen/twenty_sp" />
 
     </RelativeLayout>
 
@@ -53,8 +50,7 @@
         android:id="@+id/travel_item_content_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="test" />
+        android:padding="@dimen/ten" />
 
 
 </LinearLayout>

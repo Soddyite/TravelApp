@@ -80,8 +80,8 @@ public class NoteContentAnotherAdapter extends BaseAdapter {
         if (notesBean.getPhoto() != null && notesBean.getPhoto().getUrl() != null) {
             String imageUrl = notesBean.getPhoto().getUrl();
 //            Picasso.with(context).load(imageUrl).into(myViewHolder.backImage);
-            Picasso.with(context).load(imageUrl).resize(notesBean.getPhoto().getImage_width() / 6,
-                    notesBean.getPhoto().getImage_height() / 6).centerInside().into(myViewHolder.backImage);
+            Picasso.with(context).load(imageUrl).resize(notesBean.getPhoto().getImage_width() / 4,
+                    notesBean.getPhoto().getImage_height() / 4).centerInside().into(myViewHolder.backImage);
         } else {
             myViewHolder.backImage.setVisibility(View.GONE);
         }

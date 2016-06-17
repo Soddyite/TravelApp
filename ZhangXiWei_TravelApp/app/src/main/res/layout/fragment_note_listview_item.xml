@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="@dimen/two_hundred">
 
     <ImageView
         android:id="@+id/fragment_note_recycler_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
         android:scaleType="centerCrop" />
 
 
@@ -17,9 +17,9 @@
         android:id="@+id/fragment_note_recycler_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="@dimen/five"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginTop="@dimen/fifteen"
         android:text="name" />
 
     <TextView
@@ -27,9 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/fragment_note_recycler_name"
-        android:layout_marginLeft="20dp"
-        android:text="startdate / "
-        android:textSize="5sp" />
+        android:layout_marginLeft="@dimen/twenty"
+        android:textSize="@dimen/five_sp" />
 
     <TextView
         android:id="@+id/fragment_note_recycler_days"
@@ -37,8 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/fragment_note_recycler_name"
         android:layout_toRightOf="@id/fragment_note_recycler_startdate"
-        android:text="days , "
-        android:textSize="5sp" />
+        android:textSize="@dimen/five_sp" />
 
     <TextView
         android:id="@+id/fragment_note_recycler_photos_count"
@@ -46,8 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/fragment_note_recycler_name"
         android:layout_toRightOf="@id/fragment_note_recycler_days"
-        android:text="photos_count"
-        android:textSize="5sp" />
+        android:textSize="@dimen/five_sp" />
 
 
 </RelativeLayout>

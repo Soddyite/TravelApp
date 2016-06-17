@@ -5,27 +5,25 @@
     android:orientation="vertical">
 
 
-
     <com.example.dllo.zhangxiwei_travelapp.utils.MyImageView
         android:id="@+id/note_content_in_image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="@dimen/two_hundred"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:layout_marginTop="@dimen/ten" />
 
     <TextView
         android:id="@+id/note_content_in_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/ten"
         android:orientation="horizontal">
 
         <ImageView
@@ -41,7 +39,7 @@
             android:layout_gravity="center_vertical" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -55,26 +53,26 @@
 
             <RadioButton
                 android:id="@+id/note_content_in_bottom_support"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/fifty"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="@dimen/five"
                 android:background="@color/colorAlmostWhite"
                 android:button="@null"
                 android:drawableLeft="@mipmap/bottom_support"
                 android:gravity="center"
-                android:padding="2dp"
-                android:text="13" />
+                android:padding="@dimen/two"
+                android:text="@string/Thirty" />
 
             <RadioButton
                 android:id="@+id/note_content_in_bottom_mail"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/fifty"
                 android:layout_height="wrap_content"
                 android:background="@color/colorAlmostWhite"
                 android:button="@null"
                 android:drawableLeft="@mipmap/bottom_mail"
                 android:gravity="center"
-                android:padding="2dp"
-                android:text="2" />
+                android:padding="@dimen/two"
+                android:text="@string/Two" />
 
         </RadioGroup>
 

@@ -4,8 +4,8 @@
     android:id="@+id/popLayoutId"
     style="@style/MyDialogStyle"
     android:orientation="vertical"
-    android:layout_width="280dp"
-    android:layout_height="250dp" >
+    android:layout_width="@dimen/two_hundred_eighty"
+    android:layout_height="@dimen/two_hundred_fifty" >
 
         <WebView
             android:layout_width="match_parent"

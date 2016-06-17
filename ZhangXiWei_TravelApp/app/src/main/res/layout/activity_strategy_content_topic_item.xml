@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp">
+    android:layout_height="@dimen/two_hundred"
+    android:paddingLeft="@dimen/ten"
+    android:paddingRight="@dimen/ten"
+    android:paddingTop="@dimen/ten">
 
     <ImageView
         android:id="@+id/topic_item_imageview"
@@ -18,9 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:paddingBottom="10dp"
-        android:text="副标题"
+        android:layout_marginLeft="@dimen/twenty"
+        android:paddingBottom="@dimen/ten"
         android:textColor="@color/colorWhite" />
 
     <TextView
@@ -28,10 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/topic_item_subtitle"
-        android:layout_marginLeft="20dp"
-        android:text="东京速览"
+        android:layout_marginLeft="@dimen/twenty"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
+        android:textSize="@dimen/thirty_sp" />
 
 
 </RelativeLayout>

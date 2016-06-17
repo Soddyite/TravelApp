@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.example.dllo.zhangxiwei_travelapp.R;
 import com.example.dllo.zhangxiwei_travelapp.bean.NoteBeanContent;
 import com.example.dllo.zhangxiwei_travelapp.utils.MyListView;
-import com.example.dllo.zhangxiwei_travelapp.utils.ItemHeightUtility;
 import com.example.dllo.zhangxiwei_travelapp.utils.WeekUtility;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
 
@@ -80,25 +79,21 @@ public class NoteContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         NoteContentViewHolder viewHolder = (NoteContentViewHolder) holder;
 
-        viewHolder.imageView.setImageResource(R.mipmap.site_type2);
-
 
         NoteContentAnotherAdapter anotherAdapter = new NoteContentAnotherAdapter(context);
 
 
         if (nodesBeans.get(position).getEntry_name() != null) {
 
+            viewHolder.imageView.setImageResource(R.mipmap.site_type2);
             viewHolder.textView.setText(nodesBeans.get(position).getEntry_name().toString());
-        }
-
-
-        if (nodesBeans.get(position).getEntry_name() != null) {
-
             anotherAdapter.setPlaceName(nodesBeans.get(position).getEntry_name().toString());
         }
         anotherAdapter.setNodesBeanList(nodesBeans.get(position).getNotes());
         viewHolder.myListView.setAdapter(anotherAdapter);
-        ItemHeightUtility.setListViewHeightBasedOnChildren(viewHolder.myListView);
+
+        //设置listview全部打开的方法
+        MyListView.setListViewHeight(viewHolder.myListView);
 
 
     }
@@ -134,7 +129,6 @@ public class NoteContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             viewHolder.date.setText("");
             viewHolder.week.setText("");
         }
-
 
 
     }

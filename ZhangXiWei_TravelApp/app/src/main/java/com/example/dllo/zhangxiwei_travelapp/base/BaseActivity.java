@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 
+import com.umeng.socialize.PlatformConfig;
+
 import cn.jpush.android.api.JPushInterface;
 
 
@@ -37,5 +39,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected <T extends View> T bindView(int id) {
         return (T) findViewById(id);
     }
+
+
+
+
+
 
 }

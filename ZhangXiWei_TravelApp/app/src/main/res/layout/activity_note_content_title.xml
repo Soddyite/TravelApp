@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="@dimen/five"
     android:orientation="horizontal">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginTop="@dimen/eight"
         android:src="@mipmap/note_content_back" />
 
     <ImageView
@@ -20,26 +20,28 @@
 
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="@dimen/twenty"
         android:src="@mipmap/note_content_download" />
 
     <ImageView
+        android:id="@+id/activity_note_content_title_collect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="@dimen/twenty"
         android:src="@mipmap/note_content_collection" />
 
     <ImageView
+        android:id="@+id/activity_note_content_title_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="@dimen/twenty"
         android:src="@mipmap/note_content_share" />
 
     <ImageView

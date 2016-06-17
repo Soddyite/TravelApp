@@ -8,9 +8,14 @@ import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ImageView;
 
+import com.example.dllo.zhangxiwei_travelapp.activity.RegisterActivity;
+import com.example.dllo.zhangxiwei_travelapp.activity.SearchActivity;
 import com.example.dllo.zhangxiwei_travelapp.adapter.MainAdapter;
 import com.example.dllo.zhangxiwei_travelapp.base.BaseActivity;
+import com.example.dllo.zhangxiwei_travelapp.base.MyApplication;
 import com.example.dllo.zhangxiwei_travelapp.fragment.FragmentNote;
 import com.example.dllo.zhangxiwei_travelapp.fragment.FragmentStrategy;
 import com.example.dllo.zhangxiwei_travelapp.fragment.FragmentTools;
@@ -26,12 +31,13 @@ import java.util.concurrent.ThreadPoolExecutor;
  * Created by dllo on 16/5/9.
  * 主页,部分代码为了实现极光推送
  */
-public class MainActivity extends BaseActivity{
+public class MainActivity extends BaseActivity {
 
     MainAdapter mainAdapter;
     List<Fragment> fragments;
     ViewPager mainViewPager;
     TabLayout mainTabLayout;
+    ImageView signInIv,searchIv;
     private ThreadPoolExecutor myThreadPool;
 
     public static boolean isForeground = false;
@@ -47,11 +53,30 @@ public class MainActivity extends BaseActivity{
         mainAdapter = new MainAdapter(getSupportFragmentManager());
         mainViewPager = bindView(R.id.main_viewpager);
         mainTabLayout = bindView(R.id.main_tablayout);
+        signInIv = bindView(R.id.main_title_login);
+        searchIv = bindView(R.id.main_title_search);
 
     }
 
     @Override
     protected void initData() {
+
+        signInIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApplication.getContext(), RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+        searchIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApplication.getContext(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         fragments = new ArrayList<>();
         FragmentNote fragmentNote = new FragmentNote();
         FragmentStrategy fragmentStrategy = new FragmentStrategy();
@@ -90,7 +115,7 @@ public class MainActivity extends BaseActivity{
 
 
 
-
+    //极光推送的广播接收者
     //for receive customer msg from jpush server
     private MessageReceiver mMessageReceiver;
     public static final String MESSAGE_RECEIVED_ACTION = "com.example.jpushdemo.MESSAGE_RECEIVED_ACTION";
@@ -122,8 +147,6 @@ public class MainActivity extends BaseActivity{
             }
         }
     }
-
-
 
 
     @Override

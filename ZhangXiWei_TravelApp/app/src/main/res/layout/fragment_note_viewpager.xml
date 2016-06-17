@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="10dp">
+    android:paddingTop="@dimen/ten">
 
 
     <android.support.v4.view.ViewPager
@@ -12,8 +12,8 @@
 
     <android.support.design.widget.TabLayout
         android:id="@+id/fragment_note_rotate_point"
-        android:layout_width="30dp"
-        android:layout_height="15dp"
+        android:layout_width="@dimen/thirty"
+        android:layout_height="@dimen/fifteen"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

@@ -75,8 +75,11 @@ public class StrategyContentDestinationAdapter extends BaseAdapter {
         destinationViewHolder.strategyCount.setText(destinationBeans.get(position).getAttraction_trips_count() + "篇游记");
         destinationViewHolder.strategyCount.setTextColor(Color.WHITE);
         destinationViewHolder.placeName.setText(destinationBeans.get(position).getName());
+        destinationViewHolder.placeName.setTextColor(Color.BLACK);
         destinationViewHolder.grade.setText("分数: " + destinationBeans.get(position).getUser_score());
+        destinationViewHolder.grade.setTextColor(Color.BLACK);
         destinationViewHolder.content.setText(destinationBeans.get(position).getDescription());
+        destinationViewHolder.content.setTextColor(Color.BLACK);
 
         return convertView;
 

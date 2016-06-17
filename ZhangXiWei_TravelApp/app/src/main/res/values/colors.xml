@@ -12,6 +12,16 @@
     <color name="colorAnotherBlue">#64153CCC</color>
     <color name="colorRed">#df0513</color>
     <color name="colorBlack">#121212</color>
+    <color name="colorAlmostBlue">#286CA6</color>
+    <color name="colorAlmostGreen">#6FA45E</color>
+    <color name="colorAnotherGreen">#A4C638</color>
+    <color name="colorAnotherPink">#FFB6FF</color>
+    <color name="colorAlmostBlack">#29313a</color>
+    <color name="colorGray">#9C9C9C</color>
+
+
+
+
 
 
 </resources>

@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@color/colorBlue"
     android:orientation="horizontal"
-    android:padding="5dp">
+    android:padding="@dimen/five">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -23,12 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="日本攻略"
         android:textColor="@color/colorWhite"
-        android:textSize="18dp" />
+        android:textSize="@dimen/eighteen_sp" />
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1" />

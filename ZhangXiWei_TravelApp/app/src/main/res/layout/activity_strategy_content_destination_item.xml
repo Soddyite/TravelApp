@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="@dimen/one_hundred"
     android:orientation="horizontal"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp">
+    android:paddingLeft="@dimen/ten"
+    android:paddingRight="@dimen/ten"
+    android:paddingTop="@dimen/ten">
 
     <RelativeLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:padding="10dp">
+        android:padding="@dimen/ten">
 
         <ImageView
             android:id="@+id/destination_item_imageview"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="5dp"
+            android:paddingBottom="@dimen/five"
             android:text="818篇游记"
             android:textColor="@color/colorWhite" />
 
@@ -34,37 +34,34 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp">
+        android:paddingBottom="@dimen/five"
+        android:paddingRight="@dimen/five"
+        android:paddingTop="@dimen/five">
 
         <TextView
             android:id="@+id/destination_item_placename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="京都清水寺"
-            android:textSize="15sp" />
+            android:textSize="@dimen/fifteen_sp" />
 
         <TextView
             android:id="@+id/destination_item_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="分数:4.17"
-            android:textSize="12dp" />
+            android:layout_marginTop="@dimen/two"
+            android:textSize="@dimen/twelve_sp" />
 
         <TextView
             android:id="@+id/destination_item_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="@dimen/two"
             android:maxLines="2"
-            android:text="test"
-            android:textSize="12dp" />
+            android:textSize="@dimen/twelve_sp" />
 
 
     </LinearLayout>

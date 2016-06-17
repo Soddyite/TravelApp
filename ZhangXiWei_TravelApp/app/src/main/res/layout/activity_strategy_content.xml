@@ -10,7 +10,7 @@
         android:id="@+id/strategy_content_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/ten"
         android:fastScrollEnabled="false"
         android:scrollbars="none" />
 

@@ -1,6 +1,7 @@
 package com.example.dllo.zhangxiwei_travelapp.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,6 +95,7 @@ public class ToolSelPlaceExListAdapter extends BaseExpandableListAdapter {
         TextView tv = (TextView) convertView.findViewById(R.id.tool_selplace_exlist_parent_tv);
 
         tv.setText(this.parent.get(groupPosition));
+        tv.setTextColor(Color.GRAY);
 
 
         return convertView;
@@ -108,6 +110,7 @@ public class ToolSelPlaceExListAdapter extends BaseExpandableListAdapter {
         }
         TextView tv = (TextView) convertView.findViewById(R.id.tool_selplace_exlist_child_tv);
         tv.setText(map.get(this.parent.get(groupPosition)).get(childPosition));
+        tv.setTextColor(Color.GRAY);
 
 
         return convertView;

@@ -9,30 +9,30 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:orientation="vertical"
-        android:padding="20dip" >
+        android:padding="@dimen/twenty" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="#9C9C9C"
+            android:background="@color/colorGray"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="@dimen/ten" >
 
          <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="设置Tag和Alias "
-                android:textColor="#000" />
+                android:text="@string/Set_tag_and_alias"
+                android:textColor="@color/colorBlack" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="10dip"
+            android:layout_marginTop="@dimen/ten"
             android:background="@drawable/corners_bg"
             android:orientation="vertical"
-            android:paddingBottom="20dip"
-            android:paddingTop="20dip" >
+            android:paddingBottom="@dimen/twenty"
+            android:paddingTop="@dimen/twenty" >
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -42,24 +42,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Tag :" />
+                    android:text="@string/Tag" />
 
                 <EditText
                     android:id="@+id/et_tag"
                     style="@style/push_tag"
-                    android:layout_width="160dip"
+                    android:layout_width="@dimen/one_hundred_sixty"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginRight="5dip"
-                    android:textSize="15sp" />
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:textSize="@dimen/fifteen_sp" />
 
                 <Button
                     android:id="@+id/bt_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="设置Tag  "
-                    android:textSize="12sp" />
+                    android:text="@string/Set_tag"
+                    android:textSize="@dimen/twelve_sp" />
             </LinearLayout>
 
             <LinearLayout

@@ -17,7 +17,7 @@
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="@dimen/two_hundred"
             android:fitsSystemWindows="true">
 
             <android.support.design.widget.CollapsingToolbarLayout
@@ -34,8 +34,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
+                    android:layout_height="@dimen/one_hundred_eighty"
                     app:layout_collapseMode="parallax"
                     app:layout_collapseParallaxMultiplier="0.5">
 
@@ -49,10 +48,11 @@
 
                     <ImageView
                         android:id="@+id/note_content_user_head_image"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/forty"
+                        android:layout_height="@dimen/forty"
                         android:layout_alignParentBottom="true"
-                        android:layout_margin="5dp"
+                        android:layout_marginBottom="@dimen/fifteen"
+                        android:layout_marginLeft="@dimen/five"
                         android:src="@mipmap/ic_launcher" />
 
                     <TextView
@@ -60,65 +60,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@id/note_content_user_head_image"
-                        android:layout_toRightOf="@id/note_content_user_head_image"
-                        android:text="标题名字" />
+                        android:layout_toRightOf="@id/note_content_user_head_image" />
 
                     <TextView
                         android:id="@+id/note_content_title_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@id/note_content_user_head_image"
-                        android:layout_toRightOf="@id/note_content_user_head_image"
-                        android:text="日期" />
+                        android:layout_toRightOf="@id/note_content_user_head_image" />
 
                     <TextView
                         android:id="@+id/note_content_title_days"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@id/note_content_user_head_image"
-                        android:layout_toRightOf="@id/note_content_title_date"
-                        android:text="天数" />
+                        android:layout_toRightOf="@id/note_content_title_date" />
 
                     <TextView
                         android:id="@+id/note_content_photo_title_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@id/note_content_user_head_image"
-                        android:layout_toRightOf="@id/note_content_title_days"
-                        android:text="图片数" />
+                        android:layout_toRightOf="@id/note_content_title_days" />
 
 
                 </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@color/colorWhite"
-                    android:orientation="horizontal"
-                    android:paddingLeft="5dp">
-
-                    <TextView
-                        android:id="@+id/note_content_title_which_day"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="哪一天" />
-
-                    <TextView
-                        android:id="@+id/note_content_title_another_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="日期" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="星期" />
-
-                </LinearLayout>
 
 
             </android.support.design.widget.CollapsingToolbarLayout>
@@ -127,7 +93,7 @@
 
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/note_content_expandablelistview"
+            android:id="@+id/note_content_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -139,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
 
-            android:layout_margin="15dp"
+            android:layout_margin="@dimen/fifteen"
             android:background="@color/colorAnotherBlue"
             android:src="@mipmap/note_content_menu" />
 
@@ -150,7 +116,7 @@
     <android.support.design.widget.NavigationView
         android:id="@+id/note_content_nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="@dimen/five_hundred"
         android:layout_gravity="start|bottom"
         android:background="@color/colorTransparentBlack"
         android:fitsSystemWindows="true"

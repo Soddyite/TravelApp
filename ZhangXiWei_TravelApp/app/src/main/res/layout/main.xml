@@ -8,77 +8,77 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dip">
+        android:padding="@dimen/eight">
 
         <TextView
             android:id="@+id/tv_regId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <TextView
             android:id="@+id/tv_appkey"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <TextView
             android:id="@+id/tv_package"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <TextView
             android:id="@+id/tv_imei"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <TextView
             android:id="@+id/tv_device_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <TextView
             android:id="@+id/tv_version"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip" />
+            android:layout_marginTop="@dimen/eight" />
 
         <Button
             android:id="@+id/init"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:text="initPush" />
+            android:layout_marginTop="@dimen/eight"
+            android:text="@string/initPush" />
 
         <Button
             android:id="@+id/stopPush"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:text="stopPush" />
+            android:layout_marginTop="@dimen/eight"
+            android:text="@string/stopPush" />
 
         <Button
             android:id="@+id/resumePush"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:text="resumePush" />
+            android:layout_marginTop="@dimen/eight"
+            android:text="@string/resumePush" />
 
         <Button
             android:id="@+id/getRegistrationId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
+            android:layout_marginTop="@dimen/eight"
             android:text="get_Registration_Id" />
 
         <EditText
             android:id="@+id/msg_rec"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
+            android:layout_marginTop="@dimen/eight"
             android:visibility="invisible" />
 
 
@@ -89,6 +89,5 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
-        android:text="高级功能" />
+        android:text="@string/Advanced" />
 </RelativeLayout>

@@ -106,7 +106,7 @@ public class FragmentNote extends BaseFragment implements AbsListView.OnScrollLi
 
                         noteListView.setAdapter(listViewAdapter);
                         //把ViewPager加入到listview的头布局中
-                        noteListView.addHeaderView(myViewPager, null, false);
+                        noteListView.addHeaderView(myViewPager);
 
 
                     }

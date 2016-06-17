@@ -10,20 +10,20 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dip"
+        android:layout_marginLeft="@dimen/ten"
         android:orientation="vertical" >
         <TextView
             android:id="@+id/m_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#A4C638"
-            android:textSize="10sp" />
+            android:textColor="@color/colorAnotherGreen"
+            android:textSize="@dimen/ten_sp" />
         <TextView
             android:id="@+id/m_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFB6FF"
-            android:textSize="20sp" />
+            android:textColor="@color/colorAnotherPink"
+            android:textSize="@dimen/twenty_sp" />
     </LinearLayout>
 
 </LinearLayout>

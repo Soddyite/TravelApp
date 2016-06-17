@@ -15,11 +15,18 @@ import android.view.ViewGroup;
 public abstract class BaseFragment extends Fragment {
 
     //创建的Context对象
-    private Context mContext;
+    public Context mContext;
+
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(MyApplication.getContext());
+//        mContext = MyApplication.getContext();
+//    }
+
 
     @Override
     public void onAttach(Context context) {
-        super.onAttach(MyApplication.getContext());
+        super.onAttach(context);
         mContext = MyApplication.getContext();
     }
 

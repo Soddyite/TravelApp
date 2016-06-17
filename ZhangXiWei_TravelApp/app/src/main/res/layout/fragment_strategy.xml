@@ -9,9 +9,9 @@
         android:id="@+id/fragment_strategy_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp" />
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:paddingTop="@dimen/ten" />
 
 
 </LinearLayout>

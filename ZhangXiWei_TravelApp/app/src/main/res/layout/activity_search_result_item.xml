@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/two_hundred"
+    android:padding="@dimen/five">
+
+    <ImageView
+        android:id="@+id/activity_search_result_title_backimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fifteen">
+
+        <TextView
+            android:id="@+id/activity_search_result_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/activity_search_result_title_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_search_result_title_name" />
+
+        <TextView
+            android:id="@+id/activity_search_result_title_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_search_result_title_name"
+            android:layout_toRightOf="@id/activity_search_result_title_date" />
+
+        <TextView
+            android:id="@+id/activity_search_result_title_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_search_result_title_name"
+            android:layout_toRightOf="@id/activity_search_result_title_days" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/activity_search_result_title_headimage"
+        android:layout_width="@dimen/forty"
+        android:layout_height="@dimen/forty"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fifteen" />
+
+
+</RelativeLayout>

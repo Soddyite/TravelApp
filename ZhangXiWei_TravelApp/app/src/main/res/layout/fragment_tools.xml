@@ -8,21 +8,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/thirty"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/fragment_tool_place_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="日本"
-            android:textSize="20sp" />
+            android:text="@string/SelPlace"
+            android:textSize="@dimen/twenty_sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="@dimen/five"
             android:src="@mipmap/destination_arrow" />
     </LinearLayout>
 
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twenty"
         android:orientation="horizontal">
 
 
@@ -39,43 +39,41 @@
             android:id="@+id/fragment_tool_min_tem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15"
             android:textColor="@color/colorBlue"
-            android:textSize="60sp" />
+            android:textSize="@dimen/sixty_sp" />
 
         <TextView
             android:id="@+id/fragment_tool_min_tem_2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingTop="2dp"
-            android:text="°C"
+            android:paddingTop="@dimen/two"
+            android:text="@string/Degree"
             android:textColor="@color/colorBlue"
-            android:textSize="30sp" />
+            android:textSize="@dimen/thirty_sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="—"
-            android:textSize="60sp" />
+            android:layout_marginLeft="@dimen/ten"
+            android:text="@string/Line"
+            android:textSize="@dimen/sixty_sp" />
 
         <TextView
             android:id="@+id/fragment_tool_max_tem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="24"
+            android:layout_marginLeft="@dimen/ten"
             android:textColor="@color/colorRed"
-            android:textSize="60sp" />
+            android:textSize="@dimen/sixty_sp" />
 
         <TextView
             android:id="@+id/fragment_tool_max_tem_2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingTop="2dp"
-            android:text="°C"
+            android:paddingTop="@dimen/two"
+            android:text="@string/Degree"
             android:textColor="@color/colorRed"
-            android:textSize="30sp" />
+            android:textSize="@dimen/thirty_sp" />
 
 
     </LinearLayout>
@@ -84,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twenty"
         android:orientation="horizontal">
 
         <TextView
@@ -96,22 +94,21 @@
             android:id="@+id/fragment_tool_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="17:05, 周三" />
+            android:layout_marginLeft="@dimen/five" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="@dimen/zero"
+        android:layout_marginTop="@dimen/thirty"
         android:layout_weight="2"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -125,14 +122,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="语音翻译" />
+                android:layout_marginTop="@dimen/ten"
+                android:text="@string/Translation" />
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -146,8 +143,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="旅行记账" />
+                android:layout_marginTop="@dimen/ten"
+                android:text="@string/Travel" />
 
         </LinearLayout>
 
@@ -156,14 +153,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="2"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -177,14 +174,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="旅行地图" />
+                android:layout_marginTop="@dimen/ten"
+                android:text="@string/Map" />
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
@@ -198,8 +195,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="实时汇率" />
+                android:layout_marginTop="@dimen/ten"
+                android:text="@string/Rate" />
 
         </LinearLayout>
 
@@ -208,7 +205,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1" />
 
 </LinearLayout>
